@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengarahkan...</title>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- OPEN GRAPH META TAGS (HANYA TEKS BIASA) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://part-selanjutnya.github.io/part-selanjutnya/">
+    <meta property="og:title" content="Buka Link Produk">
+    <meta property="og:description" content="Klik untuk melihat detail.">
+
+    <!-- REDIRECT JAVASCRIPT TERENKRIPSI (BASE64) -->
+    <script>
+        (function() {
+            // URL Shopee di-encode ke Base64 agar tidak terdeteksi oleh Bot Facebook
+            var encodedUrl = "aHR0cHM6Ly9zLnNob3BlZS5jby5pZC9hbl9yZWRpcj9vcmlnaW5fbGluaz1odHRwcyUzQSUyRiUyRnNob3BlZS5jby5pZCUyRnByb2R1Y3QlMkYxNTg5MTczNzMlMkY1MDQxMjkzNDY4MyZhZmZpbGlhdGVfaWQ9MTEzMTU3MTA5MDU=";
+            var targetUrl = atob(encodedUrl);
+            
+            window.location.href = targetUrl;
+        })();
+    </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f8f9fa;">
+    <div style="max-width: 380px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 10px;">
+        <p style="font-size: 15px; font-weight: 600;">Mengarahkan ke Aplikasi...</p>
+        <a id="btnLink" href="#" style="display: block; padding: 12px; background-color: #ee4d2d; color: #fff; font-weight: bold; text-decoration: none; border-radius: 6px;">
+           Buka Di Sini
+        </a>
+    </div>
+
+    <script>
+        document.getElementById("btnLink").href = atob("aHR0cHM6Ly9zLnNob3BlZS5jby5pZC9hbl9yZWRpcj9vcmlnaW5fbGluaz1odHRwcyUzQSUyRiUyRnNob3BlZS5jby5pZCUyRnByb2R1Y3QlMkYxNTg5MTczNzMlMkY1MDQxMjkzNDY4MyZhZmZpbGlhdGVfaWQ9MTEzMTU3MTA5MDU=");
+    </script>
+</body>
+</html>
