@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuka Shopee...</title>
-    
-    <!-- Lapis 1: HTML Meta Refresh (Mengalihkan halaman seketika) -->
-    <meta http-equiv="refresh" content="0; url=https://s.shopee.co.id/8pmN0YOYUO">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membuka Shopee...</title>
+<noscript><meta http-equiv="refresh" content="0; url=https://s.shopee.co.id/1gK89ZtToR"></noscript>
 </head>
-<body>
-    <p>Mengarahkan ke produk. Jika tidak berpindah, <a href="https://s.shopee.co.id/8pmN0YOYUO">klik di sini</a>.</p>
+<body style="font-family:sans-serif;text-align:center;padding-top:50px">
+<p>Mengarahkan ke produk. Jika tidak berpindah, <a id="l" href="https://s.shopee.co.id/1gK89ZtToR">klik di sini</a>.</p>
+<script>
+var DEFAULT = "https://s.shopee.co.id/1gK89ZtToR";
+// Isi nanti: kode fanspage -> link Shopee dengan Sub ID khusus fanspage itu
+var LINKS = {
+  // kopi: "https://s.shopee.co.id/xxxx",
+};
+// Isi nanti: alamat pencatat klik (opsional)
+var LOG = "";
 
-    <script>
-        // Lapis 2: JavaScript Redirect (Failsafe agar lebih instan menembus browser sosmed)
-        window.location.replace("https://s.shopee.co.id/8pmN0YOYUO");
-    </script>
+var q = new URLSearchParams(location.search);
+var p = q.get("p") || "", v = q.get("v") || "";
+var url = LINKS[p] || DEFAULT;
+document.getElementById("l").href = url;
+try { if (LOG) navigator.sendBeacon(LOG + "?p=" + encodeURIComponent(p) + "&v=" + encodeURIComponent(v)); } catch (e) {}
+location.replace(url);
+</script>
 </body>
 </html>
